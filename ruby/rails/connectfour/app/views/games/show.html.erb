@@ -1,0 +1,18 @@
+<h1>Connect Four</h1>
+<% if @game.winner.present? %>
+  <h2>Player <%= @game.winner %> wins!</h2>
+<% else %>
+  <div id="board">
+  <% @game.state.each do |row| %>
+    <div>
+      <% row.each do |cell| %>
+        <%= cell.present? ? (cell == 1 ? "X" : "O") : "_" %> &nbsp;
+      <% end %>
+      <br/>
+    </div>
+  <% end %>
+</div>
+  <% 7.times do |column| %>
+    <%= button_to "Drop in column #{column}", game_path(@game, column: column), method: :put, remote: true %>
+  <% end %>
+<% end %>

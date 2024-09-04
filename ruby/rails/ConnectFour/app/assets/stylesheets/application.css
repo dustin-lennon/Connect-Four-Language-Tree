@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  td.empty {
+    background-color: white;
+  }
+  
+  td.player1 {
+    background-color: red;
+  }
+  
+  td.player2 {
+    background-color: yellow;
+  }
+  
